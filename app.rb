@@ -28,6 +28,10 @@ class App
   def create_person
     print 'Do you want to create a student(1) or a teacher(2)? [Input the number]: '
     person_option = gets.chomp.to_i
+    if person_option != 1 && person_option != 2
+      puts 'Invalid option'
+      return
+    end
     print 'Age: '
     age = gets.chomp.to_i
     print 'Name: '
